@@ -83,17 +83,17 @@ view model =
     div []
         [ div [ class "input-group" ]
             [ div [ class "input-group-btn" ]
-                [ button [ onClick Decrement, class "btn btn-warning" ] [ text "-" ]
+                [ button [ onClick Decrement, class "btn btn-warning btn-lg" ] [ text "-" ]
                 ]
             , input
                 [ type_ "text"
-                , class "form-control"
+                , class "form-control form-control-lg"
                 , value (toString model)
                 , onInput Explicit
                 ]
                 []
             , div [ class "input-group-btn" ]
-                [ button [ onClick Increment, class "btn btn-success" ] [ text "+" ]
+                [ button [ onClick Increment, class "btn btn-success btn-lg" ] [ text "+" ]
                 ]
             ]
         ]
