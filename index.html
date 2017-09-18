@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="main"></div>
+                </div>
+            </div>
+        </div>
+      <!-- Relative to index.html, main.elm lives in `src/Main.elm`. -->
+      <!-- Prefixing that with `/_compile/` gives us magic! -->
+      <script src="_compile/src/Main.elm"></script>
+      <script>
+
+        var node = document.getElementById('main');
+        var app = Elm.Main.embed(node);
+        
+        // var app = Elm.Main.fullscreen()
+        // You could also pass flags, or setup some ports, ...
+      </script>
+    </body>
+    </html>
