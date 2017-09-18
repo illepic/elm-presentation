@@ -13,13 +13,10 @@ import Html.Events exposing (onClick, onInput)
 --
 --
 --
-
-
-thing =
-    "blah"
-
-
-
+--
+--
+--
+--
 -- A Program with several type parameters: Flags (ignored), Model (ours), Msg (ours)
 -- TLDR: Html.beginnerProgram takes care of this for us
 -- main : Program Never Model Msg
