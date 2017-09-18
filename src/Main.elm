@@ -1,32 +1,20 @@
 module Main exposing (..)
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, beginnerProgram, div, button, input, text)
+import Html.Attributes exposing (class, type_, value)
 import Html.Events exposing (onClick, onInput)
 
 
--- main : Html msg
--- main =
---     -- Remember: all Html elements available are functions
---     -- Each takes 2 arguments: attributs and children
---     div [ class "a-class-name" ] [ text "Hello world" ]
+-- If we choose to just import all:
 --
---
---
+-- import Html exposing (..)
+-- import Html.Attributes exposing (..)
+-- import Html.Events exposing (..)
 
 
-thing =
-    "blah"
-
-
-
--- A Program with several type parameters: Flags (ignored), Model (ours), Msg (ours)
--- TLDR: Html.beginnerProgram takes care of this for us
--- main : Program Never Model Msg
-
-
+main : Program Never Model Msg
 main =
-    Html.beginnerProgram
+    beginnerProgram
         { model = model
         , view = view
         , update = update
