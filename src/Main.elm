@@ -1,15 +1,8 @@
 module Main exposing (..)
 
-import Html exposing (Html, beginnerProgram, div, button, input, text)
+import Html exposing (Html, beginnerProgram, button, div, input, text)
 import Html.Attributes exposing (class, type_, value)
-import Html.Events exposing (onClick, onInput)
-
-
--- If we choose to just import all:
---
--- import Html exposing (..)
--- import Html.Attributes exposing (..)
--- import Html.Events exposing (..)
+import Html.Events exposing (..)
 
 
 main : Program Never Model Msg
@@ -21,10 +14,6 @@ main =
         }
 
 
-
--- MODEL
-
-
 type alias Model =
     Int
 
@@ -32,10 +21,6 @@ type alias Model =
 model : Model
 model =
     0
-
-
-
--- UPDATE
 
 
 type Msg
@@ -53,17 +38,13 @@ update msg model =
         Decrement ->
             model - 1
 
-        Explicit value ->
-            case String.toInt (value) of
-                Ok value ->
-                    value
+        Explicit newval ->
+            case String.toInt newval of
+                Ok newval ->
+                    newval
 
                 Err value ->
                     0
-
-
-
--- VIEW
 
 
 view : Model -> Html Msg
