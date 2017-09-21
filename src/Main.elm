@@ -2,7 +2,10 @@ module Main exposing (..)
 
 import Html exposing (Html, beginnerProgram, button, div, input, text)
 import Html.Attributes exposing (class, type_, value)
-import Html.Events exposing (..)
+import Html.Events exposing (onClick, onInput)
+
+
+-- Comment here
 
 
 main : Program Never Model Msg
