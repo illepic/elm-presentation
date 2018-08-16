@@ -54,7 +54,7 @@ view : Model -> Html Msg
 view model =
     div []
         [ div [ class "input-group" ]
-            [ div [ class "input-group-btn" ]
+            [ div [ class "input-group-prepend" ]
                 [ button [ onClick Decrement, class "btn btn-warning btn-lg" ] [ text "-" ]
                 ]
             , input
@@ -64,7 +64,7 @@ view model =
                 , onInput Explicit
                 ]
                 []
-            , div [ class "input-group-btn" ]
+            , div [ class "input-group-append" ]
                 [ button [ onClick Increment, class "btn btn-success btn-lg" ] [ text "+" ]
                 ]
             ]
